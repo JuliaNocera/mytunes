@@ -31,8 +31,8 @@ describe('PlayerView', function() {
     expect(appView.playerView.model).to.equal(library.at(0));
   });
 
-  describe('Song transitions', function() {
-    xit('dequeues a song when finished playing & plays the next song', function(){
+  xdescribe('Song transitions', function() {
+    it('dequeues a song when finished playing & plays the next song', function(){
       var firstSong = library.at(0)
         , secondSong = library.at(1)
         , thirdSong = library.at(2)
