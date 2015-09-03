@@ -35,4 +35,12 @@ describe('SongQueueView', function() {
     expect(view.render).to.have.been.called;
   });
 
+  it('expect dequeue to remove tracks from song queue', function () {
+    sinon.spy(SongQueueView.prototype, 'render');
+    view = new SongQueueView({collection: fakeSongs});
+    view.collection.dequeue();
+    expect(view.collection.length).to.eql(1);
+    // expect(view.collection.length === 1).to.have.been.called;
+  });
+
 });
